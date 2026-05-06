@@ -23,8 +23,9 @@ export default function App() {
   const [businessName, setBusinessName] = useState("Olam Lashes Brows");
   const [phone, setPhone] = useState("61962062");
   const [location, setLocation] = useState("San José, Costa Rica");
-  const [instagram, setInstagram] = useState("@olam.lashes.brows");
+  const [instagram, setInstagram] = useState("@olam_lashes_brows");
 
+  const instagramUrl = "https://www.instagram.com/olam_lashes_brows/";
   const promoText = "10% de descuento en tu primera cita";
 
   const fadeInUp = {
@@ -70,7 +71,14 @@ export default function App() {
         </div>
         <div className="hidden md:flex gap-8 items-center text-[10px] uppercase tracking-[0.2em] font-semibold">
           <a href="#servicios" className="hover:text-brand-gold transition-colors">Servicios</a>
-          <a href="#contacto" className="px-6 py-2 bg-brand-ink text-white rounded-full hover:bg-brand-gold transition-all">WhatsApp</a>
+          <a 
+            href={`https://wa.me/${phone}`} 
+            target="_blank" 
+            rel="noreferrer"
+            className="px-6 py-2 bg-brand-ink text-white rounded-full hover:bg-brand-gold transition-all"
+          >
+            WhatsApp
+          </a>
         </div>
         <button 
           className="md:hidden p-2"
@@ -132,9 +140,9 @@ export default function App() {
           className="relative aspect-[4/5] lg:aspect-auto lg:h-[600px] w-full bg-brand-ink/5 rounded-[60px] overflow-hidden shadow-2xl"
         >
           <img 
-            src="/input_file_1.png" 
+            src="https://res.cloudinary.com/dbwevdrpp/image/upload/v1778046448/WhatsApp_Image_2026-05-05_at_11.46.39_PM_2_gfikpd.jpg" 
             alt="Olam Studio" 
-            className="w-full h-full object-cover transition-transform duration-1000"
+            className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/60 via-transparent to-transparent" />
@@ -157,7 +165,7 @@ export default function App() {
           <div className="p-8 border border-white/10 rounded-[40px] bg-white/5 backdrop-blur-sm">
             <h3 className="text-xl mb-6 font-serif flex items-center gap-2 italic">
               <Sparkles className="w-5 h-5 text-brand-gold" />
-              Previsualización de tu Flyer Digital
+              ¡Últimas citas disponibles! Cupos limitados para esta semana.
             </h3>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="space-y-3">
@@ -235,7 +243,7 @@ export default function App() {
            >
               <div className="absolute -top-12 -left-12 w-48 h-48 bg-brand-gold/5 rounded-full blur-[60px]" />
               <div className="relative rounded-[80px] overflow-hidden shadow-2xl border-8 border-white p-0">
-                <img src="https://res.cloudinary.com/dbwevdrpp/image/upload/v1778043279/POST_PORTADA_snxfky.png" alt="Geovanna CR" className="w-full h-auto grayscale-[0.3] hover:grayscale-0 transition-all duration-1000" />
+                <img src="https://res.cloudinary.com/dbwevdrpp/image/upload/v1778046439/WhatsApp_Image_2026-05-05_at_11.46.39_PM_nut7ic.jpg" alt="Geovanna CR" className="w-full h-auto grayscale-[0.3] hover:grayscale-0 transition-all duration-1000" />
               </div>
            </motion.div>
 
@@ -243,8 +251,7 @@ export default function App() {
               <span className="text-brand-gold uppercase tracking-[0.4em] text-[10px] font-bold mb-6 block">The Artist</span>
               <h2 className="text-5xl md:text-7xl mb-8 leading-tight italic font-serif">Certificación & <br/>Compromiso.</h2>
               <p className="text-brand-ink/60 mb-10 font-light text-lg leading-relaxed">
-                Soy <strong>Geovana Corrales</strong>, apasionada por el diseño de mirada. 
-                Utilizo pigmentos de la más alta calidad y técnicas internacionales para garantizar que cada clienta se sienta única.
+                Soy <strong>Geovana Corrales R</strong>, 🎓 Lash Master Trainer. Artista de pestañas, efectos, Cejas PMU y Faciales. 💎 Fundadora de Olam Lashes & Brows, estaré encantada de atenderte con materiales de alta calidad y técnicas actualizadas para garantizar que te sientas única.
               </p>
               <div className="grid grid-cols-2 gap-8">
                 <div className="space-y-2">
@@ -284,7 +291,7 @@ export default function App() {
            </div>
            <div className="h-[400px] lg:h-full relative group">
               <img 
-                src="https://res.cloudinary.com/dbwevdrpp/image/upload/v1778042829/1lash_zcznru.jpg" 
+                src="https://res.cloudinary.com/dbwevdrpp/image/upload/v1778046458/WhatsApp_Image_2026-05-05_at_11.46.39_PM_1_rdkix6.jpg" 
                 alt="Featured Lashes" 
                 className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
               />
@@ -346,19 +353,25 @@ export default function App() {
            
            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-16 w-full text-center">
               <div className="space-y-6">
-                <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mx-auto border border-white/10 hover:border-brand-gold transition-colors">
+                <a 
+                  href={`https://wa.me/${phone}`} 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mx-auto border border-white/10 hover:border-brand-gold transition-colors"
+                >
                   <Phone className="w-5 h-5 text-brand-gold" />
-                </div>
+                </a>
                 <h4 className="font-serif text-xl italic tracking-wide">WhatsApp</h4>
                 <p className="text-white/40 text-sm tracking-widest">{phone}</p>
                 <a href={`https://wa.me/${phone}`} className="inline-block text-[10px] font-bold uppercase text-brand-gold tracking-[0.2em] underline underline-offset-8">Escribir Ahora</a>
               </div>
               <div className="space-y-6">
-                <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mx-auto border border-white/10 hover:border-brand-gold transition-colors">
+                <a href={instagramUrl} target="_blank" rel="noreferrer" className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mx-auto border border-white/10 hover:border-brand-gold transition-colors">
                   <Instagram className="w-5 h-5 text-brand-gold" />
-                </div>
+                </a>
                 <h4 className="font-serif text-xl italic tracking-wide">Instagram</h4>
                 <p className="text-white/40 text-sm tracking-widest">{instagram}</p>
+                <a href={instagramUrl} target="_blank" rel="noreferrer" className="inline-block text-[10px] font-bold uppercase text-brand-gold tracking-[0.2em] underline underline-offset-8">Seguir</a>
               </div>
               <div className="space-y-6 lg:col-span-2">
                 <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mx-auto border border-white/10 hover:border-brand-gold transition-colors">
