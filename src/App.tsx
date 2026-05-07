@@ -294,13 +294,57 @@ export default function App() {
            </div>
            <div className="h-[400px] lg:h-full relative group">
               <img 
-                src="/src/assets/images/regenerated_image_1778046982890.jpg" 
+                src="https://res.cloudinary.com/dbwevdrpp/image/upload/v1778046458/WhatsApp_Image_2026-05-05_at_11.46.39_PM_1_rdkix6.jpg" 
                 alt="Featured Lashes" 
                 className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
               />
               <div className="absolute inset-0 bg-brand-gold/10 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity" />
            </div>
         </motion.div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-32 px-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+           <motion.div 
+             {...fadeInUp}
+             className="relative aspect-square rounded-[60px] overflow-hidden group shadow-xl"
+           >
+              <video 
+                src="https://res.cloudinary.com/dbwevdrpp/video/upload/v1778043360/TLLN3678_gvemce.mp4" 
+                autoPlay 
+                muted 
+                loop 
+                playsInline 
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+              />
+              <div className="absolute inset-0 bg-brand-ink/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                 <span className="px-6 py-2 bg-white/20 backdrop-blur-md rounded-full text-white text-xs uppercase tracking-widest font-bold border border-white/30">
+                   Resultados Reales
+                 </span>
+              </div>
+           </motion.div>
+           <div className="flex flex-col justify-center space-y-12 py-12 md:pl-12">
+              <motion.div {...fadeInUp}>
+                 <h3 className="text-4xl mb-6 font-serif italic">Precisión en cada trazo.</h3>
+                 <p className="text-brand-ink/50 font-light leading-relaxed">
+                   Especialistas en Microblading y Extensiones de Pestañas. 
+                   Realizamos un diagnóstico previo para determinar el efecto que mejor se adapte a tu tipo de rostro y mirada.
+                 </p>
+              </motion.div>
+              <div className="flex gap-4">
+                 <div className="w-12 h-12 rounded-full bg-brand-cream border border-brand-gold/20 flex items-center justify-center">
+                   <CheckCircle2 className="w-5 h-5 text-brand-gold" />
+                 </div>
+                 <div className="w-12 h-12 rounded-full bg-brand-cream border border-brand-gold/20 flex items-center justify-center">
+                   <Eye className="w-5 h-5 text-brand-gold" />
+                 </div>
+                 <div className="w-12 h-12 rounded-full bg-brand-cream border border-brand-gold/20 flex items-center justify-center">
+                   <Sparkles className="w-5 h-5 text-brand-gold" />
+                 </div>
+              </div>
+           </div>
+        </div>
       </section>
 
       {/* Olam Academy Section */}
@@ -372,50 +416,6 @@ export default function App() {
               </span>
             </a>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section className="py-32 px-6 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-           <motion.div 
-             {...fadeInUp}
-             className="relative aspect-square rounded-[60px] overflow-hidden group shadow-xl"
-           >
-              <video 
-                src="https://res.cloudinary.com/dbwevdrpp/video/upload/v1778043360/TLLN3678_gvemce.mp4" 
-                autoPlay 
-                muted 
-                loop 
-                playsInline 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
-              />
-              <div className="absolute inset-0 bg-brand-ink/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                 <span className="px-6 py-2 bg-white/20 backdrop-blur-md rounded-full text-white text-xs uppercase tracking-widest font-bold border border-white/30">
-                   Resultados Reales
-                 </span>
-              </div>
-           </motion.div>
-           <div className="flex flex-col justify-center space-y-12 py-12 md:pl-12">
-              <motion.div {...fadeInUp}>
-                 <h3 className="text-4xl mb-6 font-serif italic">Precisión en cada trazo.</h3>
-                 <p className="text-brand-ink/50 font-light leading-relaxed">
-                   Especialistas en Microblading y Extensiones de Pestañas. 
-                   Realizamos un diagnóstico previo para determinar el efecto que mejor se adapte a tu tipo de rostro y mirada.
-                 </p>
-              </motion.div>
-              <div className="flex gap-4">
-                 <div className="w-12 h-12 rounded-full bg-brand-cream border border-brand-gold/20 flex items-center justify-center">
-                   <CheckCircle2 className="w-5 h-5 text-brand-gold" />
-                 </div>
-                 <div className="w-12 h-12 rounded-full bg-brand-cream border border-brand-gold/20 flex items-center justify-center">
-                   <Eye className="w-5 h-5 text-brand-gold" />
-                 </div>
-                 <div className="w-12 h-12 rounded-full bg-brand-cream border border-brand-gold/20 flex items-center justify-center">
-                   <Sparkles className="w-5 h-5 text-brand-gold" />
-                 </div>
-              </div>
-           </div>
         </div>
       </section>
 
