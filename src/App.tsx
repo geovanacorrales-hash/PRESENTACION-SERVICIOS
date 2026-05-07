@@ -14,7 +14,10 @@ import {
   CheckCircle2,
   ChevronRight,
   Menu,
-  X
+  X,
+  GraduationCap,
+  TrendingUp,
+  BookOpen
 } from "lucide-react";
 import { useState } from "react";
 
@@ -291,13 +294,85 @@ export default function App() {
            </div>
            <div className="h-[400px] lg:h-full relative group">
               <img 
-                src="https://res.cloudinary.com/dbwevdrpp/image/upload/v1778046458/WhatsApp_Image_2026-05-05_at_11.46.39_PM_1_rdkix6.jpg" 
+                src="/src/assets/images/regenerated_image_1778046982890.jpg" 
                 alt="Featured Lashes" 
                 className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
               />
               <div className="absolute inset-0 bg-brand-gold/10 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity" />
            </div>
         </motion.div>
+      </section>
+
+      {/* Olam Academy Section */}
+      <section id="academy" className="py-32 bg-brand-cream/50 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-gold/20 to-transparent" />
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div {...fadeInUp} className="text-center mb-24">
+            <span className="text-brand-gold uppercase tracking-[0.5em] text-[10px] font-bold mb-4 block">Formación Profesional</span>
+            <h2 className="text-5xl md:text-7xl mb-6 italic font-serif text-brand-ink">Olam Academy</h2>
+            <p className="text-brand-ink/50 max-w-2xl mx-auto font-light">
+              Transforma tu pasión en una carrera rentable. Cursos diseñados para artistas que buscan la excelencia técnica y el éxito empresarial.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                name: "Técnica Clásica",
+                desc: "El cimiento de toda Lash Artist. Perfecciona la aplicación 1 a 1 y diseño básico.",
+                icon: <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C5A059' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 13a10 10 0 0 0 20 0'/%3E%3Cpath d='M5 10l-1.5-2'/%3E%3Cpath d='M10 9L9 6'/%3E%3Cpath d='M14 9l1-3'/%3E%3Cpath d='M19 10l1.5-2'/%3E%3C/svg%3E" alt="Minimalist Lashes" className="w-10 h-10 object-contain" />
+              },
+              {
+                name: "Volumen Artesanal",
+                desc: "Avanza al siguiente nivel con abanicos hechos a mano y efectos de densidad.",
+                icon: <GraduationCap className="w-5 h-5" />
+              },
+              {
+                name: "Tecnológicas",
+                desc: "Domina las fibras tecnológicas (Y, W, 5D) para acabados rápidos y perfectos.",
+                icon: <Sparkles className="w-5 h-5" />
+              },
+              {
+                name: "Estrategia Pro",
+                desc: "Mentalidad de negocio, marketing para beauty y cierre estratégico de ventas.",
+                icon: <TrendingUp className="w-5 h-5" />
+              }
+            ].map((course, idx) => (
+              <motion.div
+                key={idx}
+                {...fadeInUp}
+                transition={{ delay: idx * 0.1 }}
+                className="bg-white p-10 rounded-[40px] border border-brand-ink/5 hover:border-brand-gold/30 transition-all group scale-100 hover:scale-[1.02]"
+              >
+                <div className="w-12 h-12 bg-brand-cream rounded-2xl flex items-center justify-center text-brand-gold mb-8 group-hover:bg-brand-gold group-hover:text-white transition-colors duration-500">
+                  {course.icon}
+                </div>
+                <h4 className="text-xl font-serif italic mb-4 text-brand-ink">{course.name}</h4>
+                <p className="text-brand-ink/40 text-sm font-light leading-relaxed mb-8">{course.desc}</p>
+                <div className="h-[1px] w-8 bg-brand-gold/30 group-hover:w-full transition-all duration-700" />
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div 
+            {...fadeInUp}
+            className="mt-20 text-center"
+          >
+            <a 
+              href={`https://wa.me/${phone}?text=Hola Geovana, me gustaría recibir información sobre los cursos de Olam Academy.`}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex flex-col items-center gap-4 group"
+            >
+              <div className="px-10 py-5 bg-brand-ink text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-gold transition-colors flex items-center gap-3">
+                 SOLICITAR ACCESO ACADEMICO <ChevronRight className="w-4 h-4" />
+              </div>
+              <span className="text-[10px] text-brand-ink/30 uppercase tracking-[0.2em] font-bold group-hover:text-brand-gold transition-colors">
+                Cupos limitados por convocatoria
+              </span>
+            </a>
+          </motion.div>
+        </div>
       </section>
 
       {/* Gallery Section */}
